@@ -1,1 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DonateKind – Give What You Can</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>DonateKind</h1>
+    <p>Donate clothes, books, food, toys, furniture, electronics – and make a difference 💛</p>
+  </header>
+
+  <section class="form-section">
+    <h2>Donation Form</h2>
+    <form id="donationForm">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" required>
+
+      <label for="item">Item to Donate:</label>
+      <select id="item" required>
+        <option value="">--Select an Item--</option>
+        <option value="Clothes">Clothes</option>
+        <option value="Books">Books</option>
+        <option value="Food">Food</option>
+        <option value="Toys">Toys</option>
+        <option value="Furniture">Furniture</option>
+        <option value="Electronics">Electronics</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <label for="location">Pickup Location:</label>
+      <input type="text" id="location" required>
+
+      <button type="submit">Donate Now</button>
+    </form>
+  </section>
+
+  <section class="thank-you" id="thankYouMsg" style="display: none;">
+    <h3>Thank you for your kind donation! 🌼</h3>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
 
