@@ -1,0 +1,91 @@
+<!-- about.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Us – DonateKind</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>About DonateKind</h1>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="about.html">About</a> |
+      <a href="how-it-works.html">How It Works</a> |
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Our Mission</h2>
+      <p>DonateKind was created with a simple goal – to make giving easier and more accessible. We believe that donations aren't just about money. Items like clothes, books, toys, and food can bring joy and help to others in need.</p>
+
+      <h2>Who We Are</h2>
+      <p>We are a group of students passionate about social good and technology. DonateKind is our way of combining both to create impact.</p>
+    </section>
+  </main>
+</body>
+</html>
+
+<!-- how-it-works.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>How It Works – DonateKind</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>How It Works</h1>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="about.html">About</a> |
+      <a href="how-it-works.html">How It Works</a> |
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Step 1: Fill Out the Form</h2>
+      <p>Go to the homepage and fill in your name, the item you want to donate, and the pickup location.</p>
+
+      <h2>Step 2: We Connect</h2>
+      <p>Our team or volunteers will get in touch with you to confirm pickup or drop-off details.</p>
+
+      <h2>Step 3: Donation Delivered</h2>
+      <p>Your donation will be delivered to an organization or person in need. You make a difference!</p>
+    </section>
+  </main>
+</body>
+</html>
+
+<!-- contact.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact – DonateKind</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Contact Us</h1>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="about.html">About</a> |
+      <a href="how-it-works.html">How It Works</a> |
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Reach Out</h2>
+      <p>Email: donatekind@example.com</p>
+      <p>Instagram: @donatekind_official</p>
+      <p>College Club: DonateKind – Sahrdaya OnCampus</p>
+    </section>
+  </main>
+</body>
+</html>
