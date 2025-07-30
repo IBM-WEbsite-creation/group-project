@@ -17,7 +17,21 @@ document.getElementById("donationForm").addEventListener("submit", function (e) 
 document.getElementById("darkToggle").addEventListener("click", function () {
   document.body.classList.toggle("dark-mode");
 });
+// Track donation count locally
+let donationCount = parseInt(localStorage.getItem("donationCount")) || 0;
 
+function updateProgress() {
+  const goal = 100;
+  donationCount++;
+  localStorage.setItem("donationCount", donationCount);
+
+  const percent = Math.min((donationCount / goal) * 100, 100);
+  document.getElementById("progressBar").style.width = percent + "%";
+  document.getElementById("progressText").textContent = `${donationCount} / ${goal} donations`;
+}
+
+// Call this after donation
+updateProgress();
 // Generate the badge (canvas certificate)
 function generateBadge(donorName) {
   const canvas = document.getElementById("badgeCanvas");
@@ -70,6 +84,12 @@ function downloadBadge() {
   link.href = canvas.toDataURL();
   link.click();
 }
+window.addEventListener("load", () => {
+  const saved = parseInt(localStorage.getItem("donationCount")) || 0;
+  const percent = Math.min((saved / 100) * 100, 100);
+  document.getElementById("progressBar").style.width = percent + "%";
+  document.getElementById("progressText").textContent = `${saved} / 100 donations`;
+});
 
 
   
