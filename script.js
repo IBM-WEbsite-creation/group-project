@@ -1,19 +1,24 @@
-document.getElementById("donationForm").addEventListener("submit", function(e) {
+// Form submission handler
+document.getElementById("donationForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
   const name = document.getElementById("name").value;
   const item = document.getElementById("item").value;
   const location = document.getElementById("location").value;
-if (name && item && location) { 
-  document.getElementById("donationForm").reset();
-  document.getElementById("thankYouMsg").style.display = "block";
-  generateBadge(name); // ⭐ show the badge with their name
-}
 
+  if (name && item && location) {
+    document.getElementById("donationForm").reset();
+    document.getElementById("thankYouMsg").style.display = "block";
+    generateBadge(name); // 🎖️ Generate certificate with user's name
+  }
 });
+
+// Dark mode toggle (optional)
 document.getElementById("darkToggle").addEventListener("click", function () {
   document.body.classList.toggle("dark-mode");
 });
+
+// Generate the badge (canvas certificate)
 function generateBadge(donorName) {
   const canvas = document.getElementById("badgeCanvas");
   const ctx = canvas.getContext("2d");
@@ -57,7 +62,7 @@ function generateBadge(donorName) {
   ctx.fillText("DonateKind.org • Making the world better", 70, 270);
 }
 
-
+// Download button function
 function downloadBadge() {
   const canvas = document.getElementById("badgeCanvas");
   const link = document.createElement("a");
@@ -66,3 +71,5 @@ function downloadBadge() {
   link.click();
 }
 
+
+  
