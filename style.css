@@ -64,4 +64,29 @@ button:hover {
   font-size: 1.1em;
   margin-top: 8px;
 }
+.progress-section {
+  margin: 30px auto;
+  text-align: center;
+  padding: 10px;
+}
+
+.progress-container {
+  width: 80%;
+  height: 25px;
+  background-color: #ddd;
+  border-radius: 20px;
+  margin: 10px auto;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background-color: #ffa500;
+  text-align: right;
+  line-height: 25px;
+  color: white;
+  border-radius: 20px;
+  transition: width 0.5s ease;
+}
 
