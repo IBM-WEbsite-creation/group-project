@@ -1,4 +1,4 @@
-// 👇 Load progress from local storage on page load
+let donationCount = parseInt(localStorage.getItem("donationCount")) || 0;// 👇 Load progress from local storage on page load
 window.addEventListener("load", () => {
   const saved = parseInt(localStorage.getItem("donationCount")) || 0;
   const percent = Math.min((saved / 100) * 100, 100);
@@ -31,7 +31,7 @@ document.getElementById("darkToggle").addEventListener("click", function () {
 });
 
 // 👇 Progress tracker
-let donationCount = parseInt(localStorage.getItem("donationCount")) || 0;
+
 function updateProgress() {
   const goal = 100;
   donationCount++;
