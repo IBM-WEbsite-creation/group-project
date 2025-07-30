@@ -4,11 +4,12 @@ document.getElementById("donationForm").addEventListener("submit", function(e) {
   const name = document.getElementById("name").value;
   const item = document.getElementById("item").value;
   const location = document.getElementById("location").value;
+if (name && item && location) { 
+  document.getElementById("donationForm").reset();
+  document.getElementById("thankYouMsg").style.display = "block";
+  generateBadge(name); // ⭐ show the badge with their name
+}
 
-  if (name && item && location) { 
-    document.getElementById("donationForm").reset();
-    document.getElementById("thankYouMsg").style.display = "block";
-  }
 });
 document.getElementById("darkToggle").addEventListener("click", function () {
   document.body.classList.toggle("dark-mode");
