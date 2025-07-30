@@ -18,32 +18,45 @@ function generateBadge(donorName) {
   const canvas = document.getElementById("badgeCanvas");
   const ctx = canvas.getContext("2d");
 
-  // Clear previous badge
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  // Background
-  ctx.fillStyle = "#fff8dc";
+  // Gradient Background
+  const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+  gradient.addColorStop(0, "#fff4e6");
+  gradient.addColorStop(1, "#ffe0b3");
+  ctx.fillStyle = gradient;
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-  // Border
-  ctx.strokeStyle = "#ffcc00";
-  ctx.lineWidth = 8;
-  ctx.strokeRect(0, 0, canvas.width, canvas.height);
+  // Gold Border
+  ctx.strokeStyle = "#d4af37";
+  ctx.lineWidth = 10;
+  ctx.strokeRect(5, 5, canvas.width - 10, canvas.height - 10);
 
-  // Title
+  // Heading
   ctx.fillStyle = "#333";
-  ctx.font = "24px Arial";
-  ctx.fillText("Kindness Champion", 100, 80);
+  ctx.font = "28px Georgia";
+  ctx.fillText("💛 Certificate of Kindness 💛", 40, 60);
 
-  // Emoji
-  ctx.font = "48px Arial";
-  ctx.fillText("💛", 170, 140);
+  // Sub-heading
+  ctx.font = "20px Arial";
+  ctx.fillText("This certificate is proudly awarded to", 60, 110);
 
   // Name
-  ctx.font = "20px Arial";
-  ctx.fillStyle = "#ff8800";
-  ctx.fillText(`Donated by: ${donorName}`, 90, 200);
+  ctx.font = "26px 'Segoe UI', sans-serif";
+  ctx.fillStyle = "#cc6600";
+  ctx.fillText(donorName || "Anonymous", 110, 160);
+
+  // Message
+  ctx.font = "18px Arial";
+  ctx.fillStyle = "#333";
+  ctx.fillText("For donating with love and compassion ❤️", 50, 210);
+
+  // Footer
+  ctx.font = "14px Courier New";
+  ctx.fillStyle = "#777";
+  ctx.fillText("DonateKind.org • Making the world better", 70, 270);
 }
+
 
 function downloadBadge() {
   const canvas = document.getElementById("badgeCanvas");
