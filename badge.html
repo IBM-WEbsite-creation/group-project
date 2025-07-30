@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Badge Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+    canvas {
+      border: 1px solid #ccc;
+      margin-top: 20px;
+    }
+    input, button {
+      padding: 10px;
+      margin-top: 20px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎖️ Generate Your Donation Badge</h1>
+  <input type="text" id="donorName" placeholder="Enter your name">
+  <br>
+  <button onclick="generateBadge()">Generate Badge</button>
+  <br>
+  <canvas id="badgeCanvas" width="400" height="300"></canvas>
+  <br>
+  <button onclick="downloadBadge()">Download Badge</button>
+
+  <script>
+    function generateBadge() {
+      const canvas = document.getElementById("badgeCanvas");
+      const ctx = canvas.getContext("2d");
+      const name = document.getElementById("donorName").value.trim();
+
+      // Clear previous
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Background
+      ctx.fillStyle = "#fff8dc";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      // Border
+      ctx.strokeStyle = "#ffcc00";
+      ctx.lineWidth = 8;
+      ctx.strokeRect(0, 0, canvas.width, canvas.height);
+
+      // Title
+      ctx.fillStyle = "#333";
+      ctx.font = "24px Arial";
+      ctx.fillText("Kindness Champion", 100, 80);
+
+      // Heart icon (emoji)
+      ctx.font = "48px Arial";
+      ctx.fillText("💛", 170, 140);
+
+      // Donor Name
+      ctx.font = "20px Arial";
+      ctx.fillStyle = "#ff8800";
+      ctx.fillText(`Donated by: ${name || 'Anonymous'}`, 100, 200);
+    }
+
+    function downloadBadge() {
+      const canvas = document.getElementById("badgeCanvas");
+      const link = document.createElement("a");
+      link.download = "donation_badge.png";
+      link.href = canvas.toDataURL();
+      link.click();
+    }
+  </script>
+</body>
+</html>
