@@ -10,3 +10,7 @@ document.getElementById("donationForm").addEventListener("submit", function(e) {
     document.getElementById("thankYouMsg").style.display = "block";
   }
 });
+document.getElementById("darkToggle").addEventListener("click", function () {
+  document.body.classList.toggle("dark-mode");
+});
+
