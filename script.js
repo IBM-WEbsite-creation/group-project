@@ -25,12 +25,7 @@ document.getElementById("donationForm").addEventListener("submit", function (e) 
   }
 });
 
-// 👇 Dark mode toggle
-document.getElementById("darkToggle").addEventListener("click", function () {
-  document.body.classList.toggle("dark-mode");
-});
-
-// 👇 Progress tracker
+// Progress tracker
 
 function updateProgress() {
   const goal = 100;
@@ -42,7 +37,7 @@ function updateProgress() {
   document.getElementById("progressText").textContent = `${donationCount} / ${goal} donations`;
 }
 
-// 👇 Social share links
+// Social share links
 function updateSocialLinks() {
   const shareMessage = `I just donated through DonateKind! 💛 Join me at https://ibm-website-creation.github.io/group-project/`;
   document.getElementById("whatsappShare").href = `https://wa.me/?text=${encodeURIComponent(shareMessage)}`;
