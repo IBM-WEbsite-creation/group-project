@@ -81,7 +81,7 @@ function generateBadge(donorName) {
 
   ctx.font = "14px Courier New";
   ctx.fillStyle = "#777";
-  ctx.fillText("DonateKind.org • Making the world better", 70, 270);
+  ctx.fillText("KindKart.org • Making the world better", 70, 270);
 }
 
 // 👇 Download badge function
