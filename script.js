@@ -41,8 +41,6 @@ function updateProgress() {
 function updateSocialLinks() {
   const shareMessage = `I just donated through DonateKind! 💛 Join me at https://ibm-website-creation.github.io/group-project/`;
   document.getElementById("whatsappShare").href = `https://wa.me/?text=${encodeURIComponent(shareMessage)}`;
-  document.getElementById("linkedinShare").href = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(pageUrl)}`; document.getElementById("linkedinShare").href = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(pageUrl)}`;
-
 }
 
 // 👇 Badge generator
